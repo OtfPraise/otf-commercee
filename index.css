@@ -1,0 +1,192 @@
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+   
+}
+:root, :host {
+    --fa-style-family-classic: 'Font Awesome 6 Free';
+    --fa-font-solid: normal 900 1em/1 'Font Awesome 6 Free';
+  }
+  @font-face {
+    font-family: 'Font Awesome 6 Free';
+    font-style: normal;
+    font-weight: 900;
+    font-display: block;
+    src: url("../webfonts/fa-solid-900.woff2");
+  }
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background:transparent ;
+    z-index: 9;
+}
+
+.nav {
+    padding: 10px 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo img {
+    height: 60px;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    background-color: none !important;
+}
+
+.search {
+    display: flex;
+}
+
+.search-box {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #afafaf;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    background: #ffffff;
+}
+    
+.search-btn {
+    height: 40px;
+    padding: 10px 20px;
+    border: none;
+    background: #666262;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+.search-btn:hover{
+    background-color: green;
+}
+
+.nav-items a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #383838;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s;
+
+}
+
+.nav-items a:hover {
+    color: #150792;
+}
+
+.home-content {
+    background-image:url("./assets/e3.avif");
+   position: relative; /*Make the container a reference for absolute positioning */
+   height: 90vh; /* Set a height for the container */
+  
+}
+
+.home-content h1{
+    position: fixed;
+    top: 50%; /* Move the h1 down by 50% of the container's height */
+    left: 50%; /* Move the h1 right by 50% of the container's width */
+    transform: translate(-50%, -50%); /* Adjust the position to center */
+    font-size: 30vh;
+}
+.home-content button{
+    position: fixed;
+    top: 90%; /* Move the h1 down by 50% of the container's height */
+    left: 50%; /* Move the h1 right by 50% of the container's width */
+    transform: translate(-50%, -50%); /* Adjust the position to center */
+    padding: 16px;
+    margin: 5px;
+    border-radius: 8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size:medium;
+    background-color: grey;
+    color: white;
+}
+
+.home-content button:hover{
+    background-color:red;
+}
+
+.home-content h1{
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 2.0s ease-out forwards;
+}
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+    background: #383838;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #ff7d7d;
+}
